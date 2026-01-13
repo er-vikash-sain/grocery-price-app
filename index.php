@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '/../config/database.php';
-require_once __DIR__ . '/../includes/header.php';
-require_once __DIR__ . '/../includes/footer.php';
+require_once __DIR__ . '/config/database.php';
+require_once __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/includes/footer.php';
 
-render_header('Price Tracker Dashboard');
+render_header('Price Tracker Dashboard'); ?>
             <h2 class="text-2xl font-semibold mb-4">Dashboard</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                 <?php
