@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Dashboard - Grocery Price App</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#F7FAFC">
+</head>
+
+<body>
+
+    <!-- Main App Layout -->
+    <div class="app-layout">
+
+        <!-- Navigation -->
+        <nav class="app-nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="logo.png" alt="Logo" class="nav-logo-icon">
+                    <span class="nav-brand-text">Price Tracker</span>
+                </div>
+
+                <div class="nav-links">
+                    <a href="dashboard.html" class="nav-item active">Dashboard</a>
+                    <a href="stores.html" class="nav-item">Stores</a>
+                    <a href="products.html" class="nav-item">Products</a>
+                    <a href="add-price.html" class="nav-item">Add Price</a>
+                    <a href="history.html" class="nav-item">History</a>
+                    <a href="logout.php" class="nav-item text-danger">Logout</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Drawer -->
+            <div class="mobile-nav">
+                <a href="dashboard.html" class="mobile-nav-item active">Dashboard</a>
+                <a href="stores.html" class="mobile-nav-item">Stores</a>
+                <a href="products.html" class="mobile-nav-item">Products</a>
+                <a href="add-price.html" class="mobile-nav-item">Add Price</a>
+                <a href="history.html" class="mobile-nav-item">History</a>
+                <a href="logout.php" class="mobile-nav-item text-danger">Logout</a>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="content-container">
+
+                <header class="page-header">
+                    <h1>Dashboard</h1>
+                </header>
+
+                <!-- Stats Grid -->
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-label">Products</div>
+                        <div class="stat-value">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Stores</div>
+                        <div class="stat-value">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Price entries</div>
+                        <div class="stat-value">0</div>
+                    </div>
+                </div>
+
+                <!-- Recent Updates Section -->
+                <div class="content-card recent-updates">
+                    <div class="card-header">
+                        <h2>Recent Price Updates</h2>
+                        <a href="history.html" class="link-action">View all</a>
+                    </div>
+                    <div class="card-body empty-state">
+                        <p>No price updates yet.</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Simple Mobile Menu Toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        menuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('open');
+            menuBtn.classList.toggle('open');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+:root {
+    /* ------------------------------
+     1. Brand Colors
+     ------------------------------ */
+    --brand-primary: #2F80ED;
+    --brand-primary-light: #56CCF2;
+    --brand-primary-dark: #1F5FA0;
+
+    --brand-secondary: #27AE60;
+    --brand-secondary-light: #6FCF97;
+    --brand-secondary-dark: #219150;
+
+    --brand-accent-red: #EB5757;
+    --brand-accent-orange: #F2994A;
+    --brand-accent-yellow: #F2C94C;
+
+    --brand-neutral-brown: #8D6E63;
+    --brand-neutral-beige: #FDFBF7;
+    --bg-body: #F7FAFC;
+    --bg-surface: #FFFFFF;
+    --bg-input: #EDF2F7;
+
+    --text-main: #1A202C;
+    --text-muted: #718096;
+    --text-light: #FFFFFF;
+
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 24px;
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 20px 25px -5px rgba(47, 128, 237, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Base Utility Classes */
+.text-danger {
+    color: var(--brand-accent-red);
+}
