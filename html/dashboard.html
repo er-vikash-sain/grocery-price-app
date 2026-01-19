@@ -45,6 +45,9 @@
                 </button>
             </div>
 
+            <!-- Backdrop Overlay -->
+            <div class="mobile-nav-backdrop"></div>
+
             <!-- Mobile Navigation Drawer -->
             <div class="mobile-nav">
                 <a href="dashboard.html" class="mobile-nav-item active">Dashboard</a>
@@ -96,14 +99,20 @@
     </div>
 
     <script>
-        // Simple Mobile Menu Toggle
+        // Mobile Menu Toggle
         const menuBtn = document.querySelector('.mobile-menu-btn');
         const mobileNav = document.querySelector('.mobile-nav');
+        const backdrop = document.querySelector('.mobile-nav-backdrop');
 
-        menuBtn.addEventListener('click', () => {
+        function toggleMenu() {
             mobileNav.classList.toggle('open');
             menuBtn.classList.toggle('open');
-        });
+            backdrop.classList.toggle('open');
+            document.body.classList.toggle('menu-open');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        backdrop.addEventListener('click', toggleMenu);
     </script>
 </body>
 
