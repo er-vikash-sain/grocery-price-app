@@ -10,10 +10,10 @@ function get_db(): PDO
         return $pdo;
     }
 
-    $host = getenv('DB_HOST') ?: 'DB_HOST';
-    $db   = getenv('DB_NAME') ?: 'DB_NAME';
-    $user = getenv('DB_USER') ?: 'DB_USER';
-    $pass = getenv('DB_PASS') ?: 'DB_PASS';
+    $host = getenv('DB_HOST') ?: '127.0.0.1';
+    $db   = getenv('DB_NAME') ?: 'vickeyse_grocery_app';
+    $user = getenv('DB_USER') ?: 'vickeyse_grocery_app_u';
+    $pass = getenv('DB_PASS') ?: '-C6ETaWipi]TMG7t';
     $dsn  = "mysql:host={$host};dbname={$db};charset=utf8mb4";
 
     $options = [
