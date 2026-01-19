@@ -50,6 +50,7 @@
 
             <!-- Mobile Navigation Drawer -->
             <div class="mobile-nav">
+                <button class="drawer-close-btn" aria-label="Close Menu">&times;</button>
                 <a href="dashboard.html" class="mobile-nav-item active">Dashboard</a>
                 <a href="stores.html" class="mobile-nav-item">Stores</a>
                 <a href="products.html" class="mobile-nav-item">Products</a>
@@ -102,6 +103,7 @@
         // Mobile Menu Toggle
         const menuBtn = document.querySelector('.mobile-menu-btn');
         const mobileNav = document.querySelector('.mobile-nav');
+        const closeBtn = document.querySelector('.drawer-close-btn');
         const backdrop = document.querySelector('.mobile-nav-backdrop');
 
         function toggleMenu() {
@@ -112,6 +114,7 @@
         }
 
         menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
         backdrop.addEventListener('click', toggleMenu);
     </script>
 </body>

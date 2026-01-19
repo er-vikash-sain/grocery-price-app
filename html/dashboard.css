@@ -165,22 +165,52 @@ body {
     transform: translateX(0);
 }
 
+.drawer-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 8px;
+    transition: color 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.drawer-close-btn:hover {
+    color: var(--brand-accent-red);
+    transform: rotate(90deg);
+}
+
 .mobile-nav-item {
     display: flex;
     align-items: center;
-    padding: 16px 24px;
+    padding: 18px 24px;
     text-decoration: none;
     color: var(--text-main);
     font-weight: 500;
     font-size: 16px;
     transition: all 0.2s ease;
-    border-left: 3px solid transparent;
-    margin: 4px 0;
+    border-left: 4px solid transparent;
+    border-bottom: 1px dashed var(--bg-input);
+    /* Dashed border separator */
+}
+
+.mobile-nav-item:last-child {
+    border-bottom: none;
 }
 
 .mobile-nav-item:hover {
     background-color: var(--bg-input);
     border-left-color: var(--brand-primary);
+    padding-left: 30px;
+    /* Slight slide effect on hover */
 }
 
 .mobile-nav-item.active {
@@ -188,6 +218,8 @@ body {
     color: var(--brand-primary);
     font-weight: 700;
     border-left-color: var(--brand-primary);
+    border-bottom-style: solid;
+    /* Solid border for active state */
 }
 
 .mobile-nav-item.text-danger:hover {
