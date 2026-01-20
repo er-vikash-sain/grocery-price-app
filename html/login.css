@@ -141,21 +141,55 @@ input:focus {
 .remember-me {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     cursor: pointer;
     color: var(--text-muted);
+    user-select: none;
 }
 
-.remember-me input {
-    width: 18px;
-    height: 18px;
-    padding: 0;
-    margin: 0;
-    border-radius: 4px;
+.custom-checkbox {
+    position: absolute;
+    opacity: 0;
     cursor: pointer;
-    accent-color: #FF7E5F;
-    /* User Feedback: Brand Checkbox Color */
+    height: 0;
+    width: 0;
 }
+
+.checkbox-box {
+    height: 18px;
+    width: 18px;
+    background-color: #FFFFFF;
+    border: 2px solid #FF7E5F;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.custom-checkbox:checked~.checkbox-box {
+    background-color: #FF7E5F;
+}
+
+.checkbox-box:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.custom-checkbox:checked~.checkbox-box:after {
+    display: block;
+}
+
 
 .forgot-link {
     color: #FF7E5F;
