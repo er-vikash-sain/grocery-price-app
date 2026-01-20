@@ -31,7 +31,7 @@ body {
 /* Typography */
 h1 {
     font-size: 26px;
-    font-weight: 800;
+    font-weight: 600;
     color: var(--text-main);
     margin: 0 0 8px 0;
     text-align: center;
@@ -53,7 +53,7 @@ p.subtitle {
 label {
     display: block;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 8px;
     color: var(--text-main);
     margin-left: 4px;
@@ -85,7 +85,7 @@ button.btn-primary {
     border: none;
     border-radius: var(--border-radius-lg);
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(47, 128, 237, 0.3);
     transition: transform 0.1s, box-shadow 0.2s;

@@ -52,7 +52,7 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 20px;
     color: var(--text-main);
 }
@@ -83,7 +83,7 @@ body {
 }
 
 .nav-item.active {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 /* Mobile Menu Elements */
@@ -194,7 +194,7 @@ body {
     padding: 18px 24px;
     text-decoration: none;
     color: var(--text-main);
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     transition: all 0.2s ease;
     border-left: 4px solid transparent;
@@ -216,7 +216,7 @@ body {
 .mobile-nav-item.active {
     background-color: rgba(47, 128, 237, 0.08);
     color: var(--brand-primary);
-    font-weight: 700;
+    font-weight: 600;
     border-left-color: var(--brand-primary);
     border-bottom-style: solid;
     /* Solid border for active state */
@@ -249,7 +249,7 @@ body.menu-open {
     text-align: left;
     margin: 0;
     font-size: 26px;
-    font-weight: 800;
+    font-weight: 600;
     color: var(--text-main);
     letter-spacing: -0.5px;
 }
@@ -281,7 +281,7 @@ body.menu-open {
 
 .stat-value {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-main);
     line-height: 1;
 }
@@ -306,7 +306,7 @@ body.menu-open {
 .card-header h2 {
     margin: 0;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .link-action {
