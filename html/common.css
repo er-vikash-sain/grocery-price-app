@@ -2,51 +2,53 @@
 
 :root {
     /* ------------------------------
-     1. Brand Colors & Atmospheric Tones
+     1. Crisp Brand Colors & Base Tones
      ------------------------------ */
-    --brand-primary: #2F80ED;
-    --brand-primary-light: #56CCF2;
-    --brand-primary-dark: #1F5FA0;
+    --brand-primary: #2563EB;
+    /* Solid blue */
+    --brand-primary-light: #60A5FA;
+    --brand-primary-dark: #1E40AF;
 
-    --brand-secondary: #27AE60;
-    --brand-secondary-light: #6FCF97;
-    --brand-secondary-dark: #219150;
+    --brand-secondary: #059669;
+    /* Solid green */
+    --brand-secondary-light: #34D399;
+    --brand-secondary-dark: #065F46;
 
-    --brand-accent-red: #EB5757;
-    --brand-accent-orange: #F2994A;
-    --brand-accent-yellow: #F2C94C;
+    --brand-accent-red: #DC2626;
+    --brand-accent-orange: #EA580C;
+    --brand-accent-yellow: #CA8A04;
 
-    /* New atmospheric tones for backgrounds */
-    --bg-main: #F4F7FB;
-    --bg-surface: rgba(255, 255, 255, 0.85);
-    /* Semi-transparent for glassmorphism */
-    --bg-surface-opaque: #FFFFFF;
-    --bg-input: #F1F5F9;
+    /* Minimalist Backgrounds & Surfaces */
+    --bg-main: #F8FAFC;
+    /* Clean off-white */
+    --bg-surface: #FFFFFF;
+    /* Pure white surface */
+    --bg-surface-off: #F1F5F9;
+    /* Light slate for contrast */
+    --bg-input: #FFFFFF;
 
     --text-main: #0F172A;
-    /* Deeper slate for better readability */
-    --text-muted: #64748B;
+    /* Slate-900 */
+    --text-muted: #475569;
+    /* Slate-600 */
     --text-light: #FFFFFF;
 
+    --border-main: #E2E8F0;
+    /* Slate-200 */
+    --border-focus: #2563EB;
+    /* Blue-600 */
+
     /* ------------------------------
-     2. Modern UI Tokens
+     2. Precise UI Tokens
      ------------------------------ */
-    --border-radius-sm: 10px;
-    --border-radius-md: 16px;
-    --border-radius-lg: 24px;
-    --border-radius-xl: 32px;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
 
-    /* Layered Soft Shadows */
-    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 20px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-    --shadow-lg: 0 20px 40px -15px rgba(0, 0, 0, 0.12);
-    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
-
-    /* Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: 1px solid rgba(255, 255, 255, 0.4);
-    --glass-blur: blur(12px);
-    --webkit-glass-blur: blur(12px);
+    /* Ultra-Soft Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
 
     --font-family-base: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 }
@@ -61,6 +63,7 @@ body {
     color: var(--text-main);
     font-family: var(--font-family-base);
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Base Utility Classes */
@@ -68,11 +71,9 @@ body {
     color: var(--brand-accent-red);
 }
 
-.glass-card {
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--webkit-glass-blur);
-    border: var(--glass-border);
+.card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-main);
     border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-glass);
+    box-shadow: var(--shadow-sm);
 }
