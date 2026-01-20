@@ -85,6 +85,19 @@
         </div>
     </div>
 
+    <script>
+        // Password Visibility Toggle
+        const passwordInput = document.getElementById('password');
+        const toggleBtn = document.querySelector('.password-toggle');
+
+        toggleBtn.addEventListener('click', () => {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+
+            // Optional: Toggle icon appearance if needed
+            toggleBtn.style.color = type === 'text' ? '#FF7E5F' : '#94A3B8';
+        });
+    </script>
 </body>
 
 </html>

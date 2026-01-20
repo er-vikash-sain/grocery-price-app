@@ -153,6 +153,8 @@ input:focus {
     margin: 0;
     border-radius: 4px;
     cursor: pointer;
+    accent-color: #FF7E5F;
+    /* User Feedback: Brand Checkbox Color */
 }
 
 .forgot-link {
