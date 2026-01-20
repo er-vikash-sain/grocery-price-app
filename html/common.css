@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    /* ... (brand colors unchanged) ... */
+    /* ------------------------------
+     1. Brand Colors & Atmospheric Tones
+     ------------------------------ */
     --brand-primary: #2F80ED;
     --brand-primary-light: #56CCF2;
     --brand-primary-dark: #1F5FA0;
@@ -14,23 +16,37 @@
     --brand-accent-orange: #F2994A;
     --brand-accent-yellow: #F2C94C;
 
-    --brand-neutral-brown: #8D6E63;
-    --brand-neutral-beige: #FDFBF7;
-    --bg-body: #F7FAFC;
-    --bg-surface: #FFFFFF;
-    --bg-input: #EDF2F7;
+    /* New atmospheric tones for backgrounds */
+    --bg-main: #F4F7FB;
+    --bg-surface: rgba(255, 255, 255, 0.85);
+    /* Semi-transparent for glassmorphism */
+    --bg-surface-opaque: #FFFFFF;
+    --bg-input: #F1F5F9;
 
-    --text-main: #1A202C;
-    --text-muted: #718096;
+    --text-main: #0F172A;
+    /* Deeper slate for better readability */
+    --text-muted: #64748B;
     --text-light: #FFFFFF;
 
-    --border-radius-sm: 8px;
-    --border-radius-md: 12px;
+    /* ------------------------------
+     2. Modern UI Tokens
+     ------------------------------ */
+    --border-radius-sm: 10px;
+    --border-radius-md: 16px;
     --border-radius-lg: 24px;
+    --border-radius-xl: 32px;
 
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 20px 25px -5px rgba(47, 128, 237, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    /* Layered Soft Shadows */
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 20px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 40px -15px rgba(0, 0, 0, 0.12);
+    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.4);
+    --glass-blur: blur(12px);
+    --webkit-glass-blur: blur(12px);
 
     --font-family-base: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 }
@@ -40,7 +56,23 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-family-base);
+    min-height: 100vh;
+}
+
 /* Base Utility Classes */
 .text-danger {
     color: var(--brand-accent-red);
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--webkit-glass-blur);
+    border: var(--glass-border);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-glass);
 }
