@@ -483,8 +483,10 @@ body.menu-open .main-content {
     transform: scale(0.98);
 }
 
-body.menu-open .app-nav {
+body.menu-open .nav-container {
     filter: blur(8px);
+    opacity: 0.6;
+    pointer-events: none;
 }
 
 body.menu-open {
