@@ -25,34 +25,58 @@
                     <img src="logo.png" alt="Grocery Price App Logo">
                 </div>
                 <h1>Welcome Back</h1>
-                <p class="subtitle">Sign in to track savings</p>
+                <p class="subtitle">Please provide the details below to log in</p>
             </div>
 
             <form class="form-inputs" action="#" method="POST">
                 <div class="form-group">
-                    <label for="email">Email Address</label>
                     <div class="input-wrapper">
-                        <input type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email"
+                        <span class="input-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22 6 12 13 2 6"></polyline>
+                            </svg>
+                        </span>
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email" autocomplete="email"
                             required>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="password">Password</label>
                     <div class="input-wrapper">
-                        <input type="password" id="password" name="password" placeholder="Enter your password"
+                        <span class="input-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </span>
+                        <input type="password" id="password" name="password" placeholder="Enter Your Password"
                             autocomplete="current-password" required>
+                        <span class="password-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </span>
                     </div>
                 </div>
 
+                <div class="form-meta">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="forgot-password.php" class="forgot-link">Forgot Password?</a>
+                </div>
+
                 <div class="action-area">
-                    <button type="submit" class="btn-primary">Sign In</button>
+                    <button type="submit" class="btn-primary">Log In</button>
                 </div>
             </form>
-
-            <div class="links">
-                <a href="forgot-password.php">Forgot Password?</a>
-            </div>
 
             <div class="signup-link">
                 Don't have an account? <a href="signup.php">Sign Up</a>
