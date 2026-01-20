@@ -92,64 +92,62 @@
                 <!-- Stats Grid -->
                 <div class="dashboard-stats">
                     <div class="stat-card products">
-                        <div class="stat-label">
-                            <span class="stat-icon-wrapper">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="m7.5 4.27 9 5.15"></path>
-                                    <path
-                                        d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z">
-                                    </path>
-                                    <path d="m3.3 7 8.7 5 8.7-5"></path>
-                                    <path d="M12 22V12"></path>
-                                </svg>
-                            </span>
-                            Products
-                        </div>
+                        <span class="stat-icon-wrapper">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m7.5 4.27 9 5.15"></path>
+                                <path
+                                    d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z">
+                                </path>
+                                <path d="m3.3 7 8.7 5 8.7-5"></path>
+                                <path d="M12 22V12"></path>
+                            </svg>
+                        </span>
+                        <div class="stat-label">Products</div>
                         <div class="stat-value">0</div>
                     </div>
                     <div class="stat-card stores">
-                        <div class="stat-label">
-                            <span class="stat-icon-wrapper">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path>
-                                    <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"></path>
-                                    <path d="M12 3v6"></path>
-                                </svg>
-                            </span>
-                            Stores
-                        </div>
+                        <span class="stat-icon-wrapper">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path>
+                                <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"></path>
+                                <path d="M12 3v6"></path>
+                            </svg>
+                        </span>
+                        <div class="stat-label">Stores</div>
                         <div class="stat-value">0</div>
                     </div>
                     <div class="stat-card entries">
-                        <div class="stat-label">
-                            <span class="stat-icon-wrapper">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path>
-                                    <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path>
-                                    <path d="M18 12a2 2 0 0 0 0 4h4v-4Z"></path>
-                                </svg>
-                            </span>
-                            Price entries
-                        </div>
+                        <span class="stat-icon-wrapper">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path>
+                                <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path>
+                                <path d="M18 12a2 2 0 0 0 0 4h4v-4Z"></path>
+                            </svg>
+                        </span>
+                        <div class="stat-label">Price entries</div>
                         <div class="stat-value">0</div>
                     </div>
                 </div>
 
-                <!-- Recent Updates Section -->
-                <div class="content-card recent-updates">
-                    <div class="card-header">
-                        <h2>Recent Price Updates</h2>
-                        <a href="history.html" class="link-action">View all</a>
+                <div class="content-grid">
+                    <!-- Recent Activity -->
+                    <div class="content-card">
+                        <div class="card-header">
+                            <div class="header-group">
+                                <h2>Recent Price Changes</h2>
+                                <p class="card-subtitle">Latest tracked updates from your stores</p>
+                            </div>
+                            <a href="history.html" class="link-action">View all</a>
+                        </div>
+                        <div class="card-body empty-state">
+                            <p>No price updates yet.</p>
+                        </div>
                     </div>
-                    <div class="card-body empty-state">
-                        <p>No price updates yet.</p>
-                    </div>
-                </div>
 
-            </div>
+                </div>
         </main>
     </div>
 
