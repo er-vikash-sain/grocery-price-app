@@ -37,7 +37,7 @@ $stores = $storesStmt->fetchAll();
 $pricesByStore = [];
 foreach ($stores as $store) {
     $pricesStmt = $db->prepare(
-        'SELECT price, unit, created_at, comments
+        'SELECT selling_price, mrp, created_at, comments
          FROM prices
          WHERE product_id = :product_id AND store_id = :store_id
          ORDER BY created_at DESC
@@ -369,7 +369,12 @@ render_header('Product Details - ' . $product['name'], 'products');
                                 <span class="history-product">
                                     <?php echo !empty($priceEntry['comments']) ? sanitize($priceEntry['comments']) : 'Price Entry'; ?>
                                 </span>
-                                <span class="history-price">₹<?php echo number_format((float) $priceEntry['price'], 2); ?> / <?php echo sanitize($priceEntry['unit']); ?></span>
+                                <span class="history-price">
+                                    ₹<?php echo number_format((float) $priceEntry['selling_price'], 2); ?>
+                                    <?php if (!empty($priceEntry['mrp'])): ?>
+                                        <span style="font-size: 12px; color: var(--text-muted); font-weight: 500;"> (MRP: ₹<?php echo number_format((float) $priceEntry['mrp'], 2); ?>)</span>
+                                    <?php endif; ?>
+                                </span>
                                 <span class="history-date"><?php echo date('M d, Y', strtotime($priceEntry['created_at'])); ?></span>
                             </div>
                         <?php 
