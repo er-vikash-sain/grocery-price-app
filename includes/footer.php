@@ -90,7 +90,7 @@ function render_footer(): void
 
             // Service Worker Registration
             if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js');
+                navigator.serviceWorker.register('/public/assets/js/sw.js');
             }
         </script>
 
@@ -98,4 +98,3 @@ function render_footer(): void
     </html>
     <?php
 }
-

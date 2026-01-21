@@ -36,7 +36,7 @@ render_header('Stores - Price Tracker', 'stores');
     .card-header h2 {
         margin: 0;
         font-size: 18px;
-        font-weight: 800;
+        font-weight: 500;
         color: var(--text-main);
         letter-spacing: -0.8px;
     }
@@ -157,22 +157,11 @@ render_header('Stores - Price Tracker', 'stores');
         font-size: 15px;
         margin: 8px 0 0 0;
     }
-
-    .store-icon-wrapper {
-        width: 48px;
-        height: 48px;
-        background: linear-gradient(135deg, rgba(255, 179, 71, 0.1) 0%, rgba(255, 126, 95, 0.1) 100%);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #FF7E5F;
-    }
 </style>
 
 <header class="mb-8">
     <div class="flex justify-between items-center mb-2">
-        <h1 class="text-3xl font-extrabold text-[#0F172A] tracking-tight">Stores</h1>
+        <h1 class="text-3xl font-semibold text-[#0F172A] tracking-tight">Stores</h1>
         <a href="/modules/stores/add.php" class="link-action">
             <span>+ Add Store</span>
         </a>
@@ -200,7 +189,6 @@ render_header('Stores - Price Tracker', 'stores');
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Icon</th>
                         <th>Name</th>
                         <th>City</th>
                         <th>State</th>
@@ -212,15 +200,6 @@ render_header('Stores - Price Tracker', 'stores');
                     <?php foreach ($stores as $store): ?>
                         <tr>
                             <td class="col-num"><?php echo $counter++; ?></td>
-                            <td>
-                                <div class="store-icon-wrapper">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path>
-                                        <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"></path>
-                                        <path d="M12 3v6"></path>
-                                    </svg>
-                                </div>
-                            </td>
                             <td class="product-name"><?php echo sanitize($store['name']); ?></td>
                             <td class="product-unit"><?php echo sanitize((string) $store['city']); ?></td>
                             <td class="product-unit"><?php echo sanitize((string) $store['state']); ?></td>

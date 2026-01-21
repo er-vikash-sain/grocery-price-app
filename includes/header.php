@@ -79,7 +79,7 @@ function render_header(string $title, string $activePage = 'dashboard'): void
             <nav class="bg-white/60 backdrop-blur-[25px] border-b border-white/40 sticky top-0 z-[1000]">
                 <div class="max-w-[1200px] mx-auto px-6 h-[72px] flex items-center justify-between">
                     <div class="flex items-center gap-3 font-extrabold text-xl text-[#0F172A] tracking-tight">
-                        <img src="/html/logo.jpg" alt="Logo" class="h-[50px] object-contain">
+                        <img src="/assets/images/logo.jpg" alt="Logo" class="h-[50px] object-contain">
                     </div>
 
                     <div class="hidden md:flex gap-3">
@@ -118,4 +118,3 @@ function render_header(string $title, string $activePage = 'dashboard'): void
             <main class="flex-1 py-10 px-6 max-w-[1200px] w-full mx-auto">
     <?php
 }
-
