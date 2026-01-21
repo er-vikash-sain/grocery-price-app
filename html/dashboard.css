@@ -836,6 +836,13 @@ body {
     .link-action {
         padding: 10px 8px;
     }
+
+    .pagination-container {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
 }
 
 body.menu-open .main-content {
