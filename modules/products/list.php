@@ -307,6 +307,8 @@ render_header('Products - Price Tracker', 'products');
                             <td class="product-tags"><?php echo sanitize((string) $product['tags']); ?></td>
                             <td>
                                 <div class="action-buttons">
+                                    <a href="/modules/products/view.php?id=<?php echo (int) $product['id']; ?>" 
+                                       class="link-action secondary mini">View</a>
                                     <a href="/modules/products/edit.php?id=<?php echo (int) $product['id']; ?>" 
                                        class="link-action secondary mini">Edit</a>
                                     <form method="post" action="/modules/products/delete.php" class="inline" style="margin: 0;">
