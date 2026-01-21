@@ -135,11 +135,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <div class="w-full max-w-[440px] z-10 animate-[fadeIn_0.6s_ease-out]">
-        <div class="bg-white/70 backdrop-blur-[20px] border border-white/80 rounded-[24px] p-10 md:p-14 shadow-[0_20px_40px_rgba(0,0,0,0.04)]">
+        <div class="bg-[#fef9f3] backdrop-blur-[20px] border border-white/80 rounded-[24px] p-10 md:p-14 shadow-[0_20px_40px_rgba(0,0,0,0.04)]">
 
             <div class="text-center mb-10">
                 <div class="mb-6 flex justify-center">
-                    <img src="logo.jpg" alt="Logo" class="h-[90px] w-auto drop-shadow-[0_8px_16px_rgba(0,0,0,0.08)] object-contain">
+                    <img src="/public/assets/images/logo.jpg" alt="Logo" class="h-[90px] w-auto object-contain">
                 </div>
                 <h1 class="text-3xl font-extrabold text-[#0F172A] mb-2 tracking-tight">Welcome Back</h1>
                 <p class="text-[#475569] text-base">Please provide your details below</p>
