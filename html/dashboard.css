@@ -685,6 +685,51 @@ body {
     padding: 0 16px;
 }
 
+/* Product History Header Styles */
+.product-history-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.product-image-large {
+    width: 80px;
+    height: 80px;
+    background-color: #FFFFFF;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.product-image-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.product-history-header:hover .product-image-large img {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.header-text-group h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: -1px;
+}
+
+.header-text-group p {
+    margin: 4px 0 0 0;
+}
+
 /* Premium Accordion Styles */
 .accordion-wrapper {
     display: flex;
