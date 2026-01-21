@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Stores - Grocery Price App</title>
+    <title>Edit/Add Store - Grocery Price App</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="dashboard.css">
 
@@ -86,77 +86,47 @@
             <div class="content-container">
                 <header class="page-header">
                     <div class="header-content">
-                        <h1>Stores</h1>
-                        <p class="subtitle">Manage and track your primary grocery locations</p>
-                    </div>
-                    <div class="header-actions">
-                        <a href="add-store.html" class="link-action">
-                            <span>+ Add Store</span>
-                        </a>
+                        <h1>Edit/Add Store</h1>
+                        <p class="subtitle">Update store details or create a new tracking location</p>
                     </div>
                 </header>
 
                 <div class="content-grid single">
-                    <!-- Stores Table -->
-                    <div class="content-card">
-                        <div class="card-header">
-                            <div class="header-group">
-                                <h2>Registered Stores</h2>
-                                <p class="card-subtitle">Detailed list of all tracked stores</p>
-                            </div>
-                        </div>
-                        <div class="card-body table-container">
-                            <div class="modern-table-wrapper">
-                                <table class="modern-table">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Name</th>
-                                            <th>City</th>
-                                            <th>State</th>
-                                            <th>Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="col-num">1</td>
-                                            <td class="product-name">Dmart</td>
-                                            <td class="product-unit">Jaipur</td>
-                                            <td class="product-unit">Rajasthan</td>
-                                            <td class="col-action">
-                                                <div class="action-buttons">
-                                                    <a href="add-store.html" class="link-action secondary mini">Edit</a>
-                                                    <a href="#" class="link-action danger mini">Deactivate</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="col-num">2</td>
-                                            <td class="product-name">Reliance Fresh</td>
-                                            <td class="product-unit">Mumbai</td>
-                                            <td class="product-unit">Maharashtra</td>
-                                            <td class="col-action">
-                                                <div class="action-buttons">
-                                                    <a href="#" class="link-action secondary mini">Edit</a>
-                                                    <a href="#" class="link-action danger mini">Deactivate</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="col-num">3</td>
-                                            <td class="product-name">Big Bazaar</td>
-                                            <td class="product-unit">Delhi</td>
-                                            <td class="product-unit">New Delhi</td>
-                                            <td class="col-action">
-                                                <div class="action-buttons">
-                                                    <a href="#" class="link-action secondary mini">Edit</a>
-                                                    <a href="#" class="link-action danger mini">Deactivate</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                    <!-- Form Card -->
+                    <div class="content-card form-card">
+                        <div class="card-body">
+                            <form action="#" method="POST">
+                                <div class="form-group">
+                                    <label for="store-name" class="form-label">Name</label>
+                                    <input type="text" id="store-name" name="name" class="premium-input"
+                                        placeholder="Enter store name" value="Dmart">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="store-address" class="form-label">Address</label>
+                                    <textarea id="store-address" name="address" class="premium-textarea"
+                                        placeholder="Enter store address">Every</textarea>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="store-city" class="form-label">City</label>
+                                        <input type="text" id="store-city" name="city" class="premium-input"
+                                            placeholder="Enter city" value="Jaipur">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="store-state" class="form-label">State</label>
+                                        <input type="text" id="store-state" name="state" class="premium-input"
+                                            placeholder="Enter state" value="Rajasthan">
+                                    </div>
+                                </div>
+
+                                <div class="form-actions" style="margin-top: 32px;">
+                                    <button type="submit" class="link-action" style="width: 100%;">
+                                        Save Changes
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
