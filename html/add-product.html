@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Edit/Add Product - Grocery Price App</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#FFF9F2">
+</head>
+
+<body>
+
+    <!-- Background Decoration Vectors -->
+    <div class="bg-vectors" aria-hidden="true">
+        <svg class="blob blob-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFB347"
+                d="M44.7,-76.4C58.1,-69.2,69.2,-58.1,76.4,-44.7C83.7,-31.3,87.1,-15.7,85.1,-0.1C83.2,15.4,75.9,30.8,66.1,43.7C56.3,56.6,44.1,66.9,30.4,73.4C16.8,79.9,1.7,82.5,-13.7,79.9C-29.2,77.3,-45,69.5,-57.4,57.4C-69.8,45.3,-78.9,29,-82.1,12.2C-85.4,-4.6,-82.8,-21.8,-75,-36.5C-67.1,-51.2,-54,-63.3,-39.6,-70C-25.2,-76.7,-12.6,-78,1.4,-80.4C15.4,-82.8,31.3,-83.6,44.7,-76.4Z"
+                transform="translate(100 100)" />
+        </svg>
+        <svg class="blob blob-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FF7E5F"
+                d="M38.1,-65.4C49.9,-58.7,60.1,-48.5,67.4,-36.2C74.8,-23.9,79.2,-9.5,78.5,4.6C77.8,18.7,72.1,32.4,63.1,44C54.1,55.5,41.9,64.8,28.7,70.5C15.5,76.1,1.4,78.1,-12.9,76.1C-27.1,74.1,-41.4,68.2,-53.4,58.7C-65.4,49.2,-75.1,36,-79.8,21.1C-84.5,6.2,-84.1,-10.4,-78.4,-24.9C-72.7,-39.4,-61.7,-51.8,-48.9,-58.1C-36.1,-64.4,-21.6,-64.7,-7.1,-63.5C7.4,-62.3,26.2,-72,38.1,-65.4Z"
+                transform="translate(100 100)" />
+        </svg>
+        <svg class="blob blob-3" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#60A5FA"
+                d="M36.7,-64.2C47.3,-57.6,55.4,-47.5,61.1,-36.2C66.8,-24.9,70.1,-12.5,71.1,0.6C72.1,13.7,70.9,27.5,65.2,39.6C59.5,51.7,49.4,62.1,37.3,67.6C25.2,73.1,12.6,73.8,-0.1,74C-12.8,74.2,-25.6,73.9,-37.4,68.7C-49.2,63.5,-60.1,53.4,-67.2,40.9C-74.4,28.4,-77.8,13.5,-77.4,-1.2C-77,-15.9,-72.8,-30.5,-64.5,-42.6C-56.2,-54.7,-43.8,-64.4,-30.9,-69.5C-18,-74.6,-4,-75.1,8.3,-73.4C20.6,-71.7,26.1,-70.7,36.7,-64.2Z"
+                transform="translate(100 100)" />
+        </svg>
+    </div>
+
+    <!-- Main App Layout -->
+    <div class="app-layout">
+
+        <!-- Navigation -->
+        <nav class="app-nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="logo.png" alt="Logo" class="nav-logo-icon">
+                    <span class="nav-brand-text">Price Tracker</span>
+                </div>
+
+                <div class="nav-links">
+                    <a href="dashboard.html" class="nav-item">Dashboard</a>
+                    <a href="stores.html" class="nav-item">Stores</a>
+                    <a href="products.html" class="nav-item active">Products</a>
+                    <a href="add-price.html" class="nav-item">Add Price</a>
+                    <a href="history.html" class="nav-item">History</a>
+                    <a href="logout.php" class="nav-item text-danger">Logout</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+
+            <!-- Backdrop Overlay -->
+            <div class="mobile-nav-backdrop"></div>
+
+            <!-- Mobile Navigation Drawer -->
+            <div class="mobile-nav">
+                <button class="drawer-close-btn" aria-label="Close Menu">&times;</button>
+                <a href="dashboard.html" class="mobile-nav-item">
+                    Dashboard
+                </a>
+                <a href="stores.html" class="mobile-nav-item">Stores</a>
+                <a href="products.html" class="mobile-nav-item active">Products</a>
+                <a href="add-price.html" class="mobile-nav-item">Add Price</a>
+                <a href="history.html" class="mobile-nav-item">History</a>
+                <a href="logout.php" class="mobile-nav-item text-danger">Logout</a>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="content-container">
+                <header class="page-header">
+                    <div class="header-content">
+                        <h1>Edit/Add Product</h1>
+                        <p class="subtitle">Update product details or create a new inventory item</p>
+                    </div>
+                </header>
+
+                <div class="content-grid single">
+                    <!-- Form Card -->
+                    <div class="content-card form-card">
+                        <div class="card-body">
+                            <form action="#" method="POST" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="product-name" class="form-label">Name</label>
+                                    <input type="text" id="product-name" name="name" class="premium-input"
+                                        placeholder="Enter product name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="product-description" class="form-label">Description</label>
+                                    <textarea id="product-description" name="description" class="premium-textarea"
+                                        placeholder="Enter product description"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="product-image" class="form-label">Image Path</label>
+                                    <input type="file" id="product-image" name="image"
+                                        class="premium-input premium-file-input">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="product-tags" class="form-label">Tags (comma-separated,
+                                        optional)</label>
+                                    <input type="text" id="product-tags" name="tags" class="premium-input"
+                                        placeholder="e.g. grocery, cleaning, soap">
+                                </div>
+
+                                <div class="form-actions" style="margin-top: 32px;">
+                                    <button type="submit" class="link-action" style="width: 100%;">
+                                        Save Product
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const closeBtn = document.querySelector('.drawer-close-btn');
+        const backdrop = document.querySelector('.mobile-nav-backdrop');
+
+        function toggleMenu() {
+            mobileNav.classList.toggle('open');
+            menuBtn.classList.toggle('open');
+            backdrop.classList.toggle('open');
+            document.body.classList.toggle('menu-open');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        backdrop.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>

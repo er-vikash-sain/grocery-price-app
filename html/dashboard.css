@@ -518,6 +518,28 @@ body {
     color: #94A3B8;
 }
 
+.premium-file-input {
+    cursor: pointer;
+}
+
+.premium-file-input::-webkit-file-upload-button {
+    background: var(--nav-bg);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin-right: 12px;
+    color: var(--text-main);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.premium-file-input:hover::-webkit-file-upload-button {
+    background: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
 .card-body {
     padding: 32px 24px;
 }
