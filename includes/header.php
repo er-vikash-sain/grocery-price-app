@@ -55,6 +55,13 @@ function render_header(string $title, string $activePage = 'dashboard'): void
             }
 
             .menu-open { overflow: hidden; }
+
+            .mobile-nav {
+                background-color: rgba(255, 255, 255, 0.85) !important;
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                height: 100vh; /* Fallback */
+            }
         </style>
     </head>
     <body class="min-h-screen overflow-x-hidden relative">
@@ -98,21 +105,21 @@ function render_header(string $title, string $activePage = 'dashboard'): void
                         <span class="bar w-full h-0.5 bg-[#0F172A] transition-all"></span>
                     </button>
                 </div>
-
-                <!-- Mobile Navigation Backdrop -->
-                <div class="mobile-nav-backdrop fixed inset-0 bg-black/20 backdrop-blur-sm z-[998] hidden opacity-0 transition-opacity duration-300"></div>
-
-                <!-- Mobile Navigation Drawer -->
-                <div class="mobile-nav fixed top-0 right-0 h-full w-[280px] bg-white/95 backdrop-blur-[25px] shadow-2xl z-[999] transform translate-x-full transition-transform duration-300 flex flex-col p-6">
-                    <button class="drawer-close-btn self-end text-3xl text-[#0F172A] mb-8">&times;</button>
-                    <a href="/index.php" class="mobile-nav-item <?php echo $activePage === 'dashboard' ? 'active' : ''; ?>">Dashboard</a>
-                    <a href="/modules/stores/list.php" class="mobile-nav-item <?php echo $activePage === 'stores' ? 'active' : ''; ?>">Stores</a>
-                    <a href="/modules/products/list.php" class="mobile-nav-item <?php echo $activePage === 'products' ? 'active' : ''; ?>">Products</a>
-                    <a href="/modules/prices/add.php" class="mobile-nav-item <?php echo $activePage === 'add-price' ? 'active' : ''; ?>">Add Price</a>
-                    <a href="/modules/prices/history.php" class="mobile-nav-item <?php echo $activePage === 'history' ? 'active' : ''; ?>">History</a>
-                    <a href="/logout.php" class="mobile-nav-item text-red-600">Logout</a>
-                </div>
             </nav>
+
+            <!-- Mobile Navigation Backdrop -->
+            <div class="mobile-nav-backdrop fixed inset-0 bg-black/20 backdrop-blur-sm z-[1001] hidden opacity-0 transition-opacity duration-300"></div>
+
+            <!-- Mobile Navigation Drawer -->
+            <div class="mobile-nav fixed top-0 bottom-0 right-0 w-[280px] bg-white shadow-2xl z-[1002] transform translate-x-full transition-transform duration-300 flex flex-col p-6">
+                <button class="drawer-close-btn self-end text-3xl text-[#0F172A] mb-8">&times;</button>
+                <a href="/index.php" class="mobile-nav-item <?php echo $activePage === 'dashboard' ? 'active' : ''; ?>">Dashboard</a>
+                <a href="/modules/stores/list.php" class="mobile-nav-item <?php echo $activePage === 'stores' ? 'active' : ''; ?>">Stores</a>
+                <a href="/modules/products/list.php" class="mobile-nav-item <?php echo $activePage === 'products' ? 'active' : ''; ?>">Products</a>
+                <a href="/modules/prices/add.php" class="mobile-nav-item <?php echo $activePage === 'add-price' ? 'active' : ''; ?>">Add Price</a>
+                <a href="/modules/prices/history.php" class="mobile-nav-item <?php echo $activePage === 'history' ? 'active' : ''; ?>">History</a>
+                <a href="/logout.php" class="mobile-nav-item text-red-600">Logout</a>
+            </div>
 
             <!-- Main Content Area -->
             <main class="flex-1 py-10 px-6 max-w-[1200px] w-full mx-auto">

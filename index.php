@@ -17,7 +17,7 @@ $totalStores = (int) $db->query('SELECT COUNT(*) AS c FROM stores WHERE is_activ
 $totalPrices = (int) $db->query('SELECT COUNT(*) AS c FROM prices')->fetch()['c'];
 
 $recentStmt = $db->query(
-    'SELECT p.id, p.price, p.unit, p.created_at, pr.name AS product_name, s.name AS store_name
+    'SELECT p.id, p.selling_price, p.mrp, p.created_at, pr.name AS product_name, s.name AS store_name
      FROM prices p
      JOIN products pr ON pr.id = p.product_id
      JOIN stores s ON s.id = p.store_id
@@ -245,8 +245,8 @@ render_header('Price Tracker Dashboard', 'dashboard');
                     <tr>
                         <th>Product</th>
                         <th>Store</th>
-                        <th>Price</th>
-                        <th>Unit</th>
+                        <th>Selling Price</th>
+                        <th>MRP</th>
                         <th>Recorded At</th>
                     </tr>
                 </thead>
@@ -255,8 +255,14 @@ render_header('Price Tracker Dashboard', 'dashboard');
                         <tr>
                             <td class="font-bold"><?php echo sanitize((string) $row['product_name']); ?></td>
                             <td><?php echo sanitize((string) $row['store_name']); ?></td>
-                            <td class="font-semibold text-[#FF7E5F]">₹<?php echo number_format((float) $row['price'], 2); ?></td>
-                            <td class="text-[#475569]"><?php echo sanitize((string) $row['unit']); ?></td>
+                            <td class="font-semibold text-[#FF7E5F]">₹<?php echo number_format((float) $row['selling_price'], 2); ?></td>
+                            <td class="text-[#475569]">
+                                <?php if (!empty($row['mrp'])): ?>
+                                    ₹<?php echo number_format((float) $row['mrp'], 2); ?>
+                                <?php else: ?>
+                                    <span class="text-[#94A3B8]">N/A</span>
+                                <?php endif; ?>
+                            </td>
                             <td class="text-[#475569] text-sm"><?php echo sanitize((string) $row['created_at']); ?></td>
                         </tr>
                     <?php endforeach; ?>

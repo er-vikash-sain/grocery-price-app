@@ -90,7 +90,7 @@ FROM (
   WHERE p1.product_id = :product_id
 ) AS p
 JOIN stores s ON s.id = p.store_id
-ORDER BY p.price ASC
+ORDER BY p.selling_price ASC
 LIMIT 1
 SQL;
 
