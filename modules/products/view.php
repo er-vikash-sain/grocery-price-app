@@ -68,6 +68,19 @@ render_header('Product Details - ' . $product['name'], 'products');
         align-items: flex-start;
     }
 
+    @media (max-width: 768px) {
+        .product-header-card {
+            flex-direction: column;
+            padding: 24px;
+            gap: 24px;
+        }
+        
+        .product-image-large {
+            width: 100%;
+            height: 250px;
+        }
+    }
+
     .product-image-large {
         width: 200px;
         height: 200px;

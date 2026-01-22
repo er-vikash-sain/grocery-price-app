@@ -113,6 +113,7 @@ render_header('Products - Price Tracker', 'products');
         width: 100%;
         border-collapse: collapse;
         text-align: left;
+        min-width: max-content;
     }
 
     .modern-table thead {
